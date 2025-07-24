@@ -9,14 +9,11 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route Component={DefaultLayout}>
-
-          <Route path="/Home" Component={HomePage} />
+          <Route index Component={HomePage} /> 
           <Route path="/About" Component={AboutPage} />
           <Route path="/Products" Component={ProductsPage} />
         </Route>
-
       </Routes>
     </BrowserRouter>
   )
 }
-
