@@ -9,7 +9,7 @@ export default function HomePage() {
                     src={jumbotron}
                     alt="Jumbotron"
                     className="position-absolute top-0 start-0"
-                    style={{ width: "106%", height: "100vh", objectFit: "cover", zIndex: -1, transform: "translateX(-5%)" }} />
+                    style={{ width: "100%", height: "100vh", objectFit: "cover", zIndex: -1 }} />
                 <div
                     className="position-absolute start-50 translate-middle-x d-flex flex-column justify-content-center align-items-center"
                     style={{ top: "60%", width: "100%" }}>

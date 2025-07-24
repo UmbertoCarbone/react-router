@@ -52,12 +52,11 @@ export default function ProductsPage() {
 
     return (
         <>
-            <main style={{ paddingTop: "80px" }}>
-                <h1 className="text-center">this is a Products page</h1>
-                <p className="text-center">Prova</p>
+            <main className="container" style={{ paddingTop: "80px" }}>
+                <h1 className="text-center">Products</h1>
                 <div className="row">
                     {products.map(product => (
-                        <div className="col-md-4 mb-4" key={product.id}>
+                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" key={product.id}>
                             <div className="card h-100">
                                 <img src={product.image} className="card-img-top p-3" alt={product.title} style={{ height: "200px", objectFit: "contain" }} />
                                 <div className="card-body">
