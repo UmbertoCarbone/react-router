@@ -53,8 +53,8 @@ export default function ProductsPage() {
     return (
         <>
             <main style={{ paddingTop: "80px" }}>
-                <h1>this is a Products page</h1>
-                <p>Prova</p>
+                <h1 className="text-center">this is a Products page</h1>
+                <p className="text-center">Prova</p>
                 <div className="row">
                     {products.map(product => (
                         <div className="col-md-4 mb-4" key={product.id}>
