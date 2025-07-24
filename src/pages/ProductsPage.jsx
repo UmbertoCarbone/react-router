@@ -52,7 +52,7 @@ export default function ProductsPage() {
 
     return (
         <>
-            <main>
+            <main style={{ paddingTop: "80px" }}>
                 <h1>this is a Products page</h1>
                 <p>Prova</p>
                 <div className="row">

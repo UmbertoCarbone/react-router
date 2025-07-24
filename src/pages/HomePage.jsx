@@ -1,5 +1,5 @@
 import jumbotron from "../assets/jumbotron.jpg"
-import { Outlet, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function HomePage() {
     return (
@@ -20,7 +20,7 @@ export default function HomePage() {
                             fontSize: "2rem",
                             fontWeight: "bold",
                             color: "rgba(255,255,255,0.7)", // bianco trasparente
-                            
+
                             borderRadius: "20px",
                             padding: "0.5rem 2rem",
                             textDecoration: "none"
@@ -28,8 +28,9 @@ export default function HomePage() {
                     >
                         Products
                     </NavLink>
+
                 </div>
-            </main>
+            </main >
         </>
     )
 }

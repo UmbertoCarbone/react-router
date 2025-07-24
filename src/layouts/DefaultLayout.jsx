@@ -3,8 +3,9 @@ import { Outlet, NavLink } from 'react-router-dom';
 export default function DefaultLayout() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light w-100">
-                <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-fixed-transparent">
+                <div className="container"
+                >
 
                     <h2>SHOP</h2>
                     <div className="collapse navbar-collapse">
@@ -22,9 +23,8 @@ export default function DefaultLayout() {
                     </div>
                 </div>
             </nav>
-            <div className=" text-center">
-                <Outlet />
-            </div>
+            <Outlet />
+
         </>
     );
 }
