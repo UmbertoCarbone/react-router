@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import ProductGrid from "../components/ProductGrid";
 
 export default function ProductsPage() {
     const [products, setProducts] = useState([]);
-    const [userRatings, setUserRatings] = useState({}); // { productId: { rating, count } }
+    const [userRatings, setUserRatings] = useState({});
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products")
@@ -54,26 +55,12 @@ export default function ProductsPage() {
         <>
             <main className="container" style={{ paddingTop: "80px" }}>
                 <h1 className="text-center">Products</h1>
-                <div className="row">
-                    {products.map(product => (
-                        <div className="col-12 col-md-6 col-lg-4 col-xl-3 mb-4" key={product.id}>
-                            <div className="card h-100">
-                                <img src={product.image} className="card-img-top p-3" alt={product.title} style={{ height: "200px", objectFit: "contain" }} />
-                                <div className="card-body">
-                                    <h5 className="card-title">{product.title}</h5>
-                                    <p className="card-text">{product.price} €</p>
-                                    <div>
-                                        {renderStars(product.rating.rate, product.id)}
-                                        <span className="ms-2 text-muted">
-                                            ({getDisplayCount(product)} voti)
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <ProductGrid
+                    products={products}
+                    renderStars={renderStars}
+                    getDisplayCount={getDisplayCount}
+                />
             </main>
         </>
-    )
+    );
 }
