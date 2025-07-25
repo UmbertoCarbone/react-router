@@ -14,6 +14,7 @@ export default function App() {
           <Route path="/About" Component={AboutPage} />
           <Route path="/Products" Component={ProductsPage} />
           <Route path="/Products/:id" Component={GetSingleProductsPage} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
